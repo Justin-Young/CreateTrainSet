@@ -26,5 +26,5 @@
 * **python-tika** 
 * **pdfminer.six**   *(conflict with other pdfminer)*
 * **python-docx**
-* **pywin32(已弃用,换用python-tika)**
+* ~~**pywin32(已弃用,换用python-tika)**~~
 
