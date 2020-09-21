@@ -41,8 +41,8 @@ class ClassifyGUI(Frame):
         self.rowconfigure(3, weight=1)
         self.columnconfigure(0, weight=5)
         self.columnconfigure(1, weight=1)
-        self.columnconfigure(2, weight=2)
-        self.columnconfigure(3, weight=2)
+        self.columnconfigure(2, weight=1)
+        self.columnconfigure(3, weight=1)
         # 添加框架容器
         self.grid(column=0, row=0, columnspan=4, rowspan=4, sticky=(N, W, E, S))
         # 将句子列表添加至listbox,设置多行选中模式

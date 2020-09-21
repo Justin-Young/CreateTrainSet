@@ -1,6 +1,7 @@
 import os.path
 import docx
-from win32com import client
+# from win32com import client
+
 
 
 def docx2string(path):
@@ -26,21 +27,21 @@ def docx2string(path):
         return result
 
 
-def doc2docx(path):
-    """
-    将doc文件转换为为同名docx文件
-
-    :param path: doc文件的完整路径
-    :raise FileNotFoundError
-    """
-    if not os.path.exists(path):
-        raise FileNotFoundError
-    else:
-        word = client.DispatchEx("Word.Application")
-        doc = word.Documents.Open(path)
-        doc.SaveAs(path[:-3] + 'docx', 16)
-        doc.Close()
-        word.Quit()
+# def doc2docx(path):
+#     """
+#     将doc文件转换为为同名docx文件
+#
+#     :param path: doc文件的完整路径
+#     :raise FileNotFoundError
+#     """
+#     if not os.path.exists(path):
+#         raise FileNotFoundError
+#     else:
+#         word = client.DispatchEx("Word.Application")
+#         doc = word.Documents.Open(path)
+#         doc.SaveAs(path[:-3] + 'docx', 16)
+#         doc.Close()
+#         word.Quit()
 
 
 def is_already_converted(path):
@@ -54,3 +55,4 @@ def is_already_converted(path):
         return True
     else:
         return False
+

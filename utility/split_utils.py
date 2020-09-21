@@ -8,6 +8,8 @@ def split2sentences(string):
     :param string: 从简历中获取的文本
     :return: 分句后的句子序列
     """
+    # 去掉特殊符号，项目符号
+    string = re.sub(r'[•⚫�]', '', string)
     # 去掉空行
     string = re.sub(r' *\n', '##', string)
     # 去掉句中换行

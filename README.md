@@ -18,8 +18,13 @@
     最后要点击保存才会保存，否则不会保存（特别是关闭窗口不会保存）
 ### 输出
     目前只有句子分类的输出，输出的格式为index[tab]sentence[tab]label
+### tika环境配置
+    1. pip install tika
+    2. tika工具依赖tika_server.jar包，该包位于工程的lib目录下，可以移出到自定义目录
+    2. 添加环境变量 TIKA_SERVER_JAR="file:///<yourpath>/tika-server-1.24.jar
 # Dependencies
+* **python-tika** 
 * **pdfminer.six**   *(conflict with other pdfminer)*
 * **python-docx**
-* **pywin32**
+* **pywin32(已弃用,换用python-tika)**
 
